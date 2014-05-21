@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
+gem 'starter_generators', :git => "git://github.com/rbetina/starter_generators.git", :branch => "kiei925"
+
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
