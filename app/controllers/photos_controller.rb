@@ -6,10 +6,12 @@ class PhotosController < ApplicationController
   def show
     @photo = Photo.find(params[:id])
     @comment = Comment.find(params[:id])
+    @favorite = Favorite.find(params[:id])
   end
 
   def new
     @photo = Photo.new
+    @photo.user_id = current_user.id
   end
 
   def create
@@ -27,6 +29,7 @@ class PhotosController < ApplicationController
 
   def edit
     @photo = Photo.find(params[:id])
+    @photo.user_id = current_user.id
   end
 
   def update
