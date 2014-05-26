@@ -19,7 +19,7 @@ class FavoritesController < ApplicationController
 
 
     if @favorite.save
-      redirect_to "/photos/#{@favorite.photo.id}", :notice => "Favorite created successfully."
+      redirect_to "/photos/#{@favorite.photo_id}", :notice => "Favorite created successfully."
     else
       render 'new'
     end

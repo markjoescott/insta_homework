@@ -52,7 +52,8 @@ Rails.application.routes.draw do
   # DELETE
   get('/delete_photo/:id', { :controller => 'photos', :action => 'destroy' })
 
-  get('/wall', {:controller => 'photos', :action => 'display'})
+  get('/my_favorites', {:controller => 'photos', :action => 'favorites'})
+  get('/my_wall', {:controller => 'photos', :action => 'wall'})
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>InstaHomework</title>
 
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/lumen/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
   <style>
@@ -45,10 +45,9 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <% if current_user.present? %>
-          <li><a href="/users/edit"><%= current_user.email %> </a></li>
+        <% if current_user.present?  %>
+          <li><a href="/users/edit"><% current_user.email %></a></li>
           <li><a href="/users/sign_out" data-method="delete">Sign out</a></li>
-          <li><a href="/users/edit">Edit Profile</a></li>
         <% else %>
           <li><a href="/users/sign_up">Sign up</a></li>
           <li><a href="/users/sign_in">Sign in</a></li>
