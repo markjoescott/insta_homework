@@ -8,9 +8,9 @@
   <thead>
     <tr>
       <th>Photo</th>
-      <th>Photo ID Number</th>
       <th>User</th>
       <th>Email</th>
+      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -22,6 +22,11 @@
 
         <td><%= favorite.photo_id %></td>
          <td><%= favorite.user_id %></td>
+        <td><%= favorite.user.email %></td>
+
+
+
+
 
         <td>
           <a href="/favorites/<%= favorite.id %>" class="btn btn-primary">
@@ -43,5 +48,4 @@
   </tbody>
 </table>
 
-<%# <td><img src="<%= favorite.photo.image_url %> " width ="60"></td>
-<td><%#<%= favorite.user.email %></td>
+
