@@ -1,12 +1,12 @@
 class PhotosController < ApplicationController
   def index
     @photos = Photo.all
+
   end
 
   def show
     @photo = Photo.find(params[:id])
-    @comment = Comment.find(params[:id])
-    # @favorite = Favorite.find(params[:id])
+
   end
 
   def new

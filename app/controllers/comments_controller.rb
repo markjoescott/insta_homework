@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
-    # @favorite = Favorite.find(params[:id])
+
   end
 
   def new
