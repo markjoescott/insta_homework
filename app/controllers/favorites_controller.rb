@@ -9,6 +9,7 @@ class FavoritesController < ApplicationController
 
   def new
     @favorite = Favorite.new
+    @favorite.photo_id = params[:photo_id]
     @favorite.user_id = current_user.id
   end
 
